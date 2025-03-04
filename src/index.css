@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  /* 배경색상 */
+  --ivory: #F7F3E7;
+
+  /* 잘 어울리는 컬러들 */
+  --purple: #9B5C8D;
+  /* 부드러운 보라색 (Primary) */
+  --yellow: #F7D5A0;
+  /* 밝은 오렌지색 (Secondary) */
+  --green: #A3D6A0;
+  /* 부드러운 녹색 (Accent) */
+  --black-1: #3F3F3F;
+  /* 어두운 회색 (텍스트용) */
+  --brown: #E2CFC7;
+  /* 연한 갈색 (테두리용) */
+  --orange: #F4A261;
+  /* 올리브 색상 (강조용) */
+  --white-1: #F0F0F0;
+  /* 아주 연한 회색 (부드러운 흰색 느낌) */
+  --white-2: #EAEAEA;
+  /* 연한 회색 (고급스러운 흰색 느낌) */
+  --black-2: #2C2C2C;
+  /* 다크 회색 (덜 강한 검정) */
+  --gray: #4E4E4E;
+  /* 미드 그레이 (좀 더 부드러운 느낌) */
+  --red: #FFB2B2;
+  /* 연한 빨간색 */
+}
+
+body {
+  background-color: var(--ivory);
+  color: var(--black-1);
+  margin: 0;
+  font-family: "Roboto", "Noto Serif KR", serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  line-height: 1;
+  transform: rotate(0.03deg);
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+  background-color: transparent;
+}
