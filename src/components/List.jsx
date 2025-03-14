@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
+/* eslint-disable react/prop-types */
+import { useState } from 'react'
 import { FaRegStar, FaRegTrashAlt, FaStar } from 'react-icons/fa'
+
 
 function List({todos,todo,setTodos}) {
   // todo = {id:'string', content:'string', finish:false, favorite:false }

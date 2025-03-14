@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import { FaRegStar, FaRegTrashAlt } from "react-icons/fa";
+import { useState } from 'react'
 import './App.css'
 import { IoMdAddCircleOutline } from 'react-icons/io';
 import List from './components/List';
@@ -12,6 +11,7 @@ function App() {
   // state 변수
   const [todos, setTodos] = useState([])
   const [value, setValue] = useState('')
+  const [order, setOrder] = useState(1)
 
   // function
   function handleChange(e) {
@@ -21,10 +21,12 @@ function App() {
   function handleSubmit(e) {
     e.preventDefault();
     if (value.length > 0) {
-      let newTodo = { id: crypto.randomUUID(), content: value, finish: false, important: false, order:todos.length+1 }
+      let newTodo = { id: crypto.randomUUID(), content: value, finish: false, important: false, order:order }
       let copyTodos = [newTodo, ...todos]
       setTodos(copyTodos);
       setValue('')
+      setOrder(order+1)
+      copyTodos.sort((a,b)=> ((a.important === b.important) ? 0 : a.important ? -1 : 1))
     } else {
       console.log('오늘의 할 일을 입력하세요.');
       
